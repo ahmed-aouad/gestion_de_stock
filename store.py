@@ -19,10 +19,8 @@ class StockManagementApp:
         # Initialise le gestionnaire de produits en utilisant la configuration de la base de données
         self.product_manager = Product(db_config)
 
-        # Variable pour stocker l'ID du produit sélectionné
         self.selected_product_id = None
 
-        # Crée les widgets de l'interface utilisateur
         self.create_widgets()
 
         # Charge les données depuis la base de données
@@ -112,7 +110,6 @@ class StockManagementApp:
         self.id_category_var.set(selected_product[5])
 
     def add_product(self):
-        # Appelle la méthode d'ajout de produit avec les valeurs des champs de saisie
         self.product_manager.add_product(
             self.name_var.get(),
             self.description_var.get(),
@@ -127,7 +124,6 @@ class StockManagementApp:
 
     def update_product(self):
         if self.selected_product_id:
-            # Appelle la méthode de mise à jour de produit avec les valeurs des champs de saisie et l'ID du produit sélectionné
             self.product_manager.update_product(
                 self.selected_product_id,
                 self.name_var.get(),

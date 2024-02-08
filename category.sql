@@ -1,4 +1,4 @@
-mysql> CREATE TABLE category (  --création d'une table nommée: product 
+mysql> CREATE TABLE category (  --création d'une table nommée: category
     ->     id INT AUTO_INCREMENT PRIMARY KEY,
     ->     name VARCHAR(255)
     -> );
